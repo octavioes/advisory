@@ -65,17 +65,17 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --mist:#EDF1EE;
-    --paper:#F8FAF8;
-    --ink:#12302C;
-    --ink-soft:#3E5A55;
-    --river:#2E6B5C;
-    --river-deep:#1F4E43;
-    --amber:#C98A1B;
-    --line:#C9D5CF;
+    --mist:#F4F1EA;
+    --paper:#FBF9F5;
+    --ink:#151515;
+    --ink-soft:#57534C;
+    --river:#1C1C1C;
+    --river-deep:#000000;
+    --amber:#8C7B5E;
+    --line:#DED8CC;
     --max:1080px;
   }
   *{box-sizing:border-box}
@@ -85,13 +85,14 @@
   a{color:var(--river-deep)}
   a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;line-height:1.08;margin:0;letter-spacing:-0.01em}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;margin:0;letter-spacing:0}
 
   /* Header */
   header{padding:22px 0}
   header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
-  .brand small{display:block;font-family:"Public Sans",sans-serif;font-weight:500;font-size:13px;color:var(--ink-soft);letter-spacing:0}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;color:var(--ink);line-height:1.15}
+  .brand-mark{display:block;width:44px;height:auto;flex-shrink:0}
+  .brand small{display:block;margin-top:2px;text-transform:none;letter-spacing:0;font-family:"Public Sans",sans-serif;font-weight:500;font-size:13px;color:var(--ink-soft);letter-spacing:0}
   .head-nav{display:flex;align-items:center;gap:26px}
   .nav-link{font-weight:600;font-size:15px;text-decoration:none;color:var(--ink-soft)}
   .nav-link:hover{color:var(--river-deep)}
@@ -102,11 +103,11 @@
   .btn-primary{background:var(--river);color:#fff}
   .btn-primary:hover{background:var(--river-deep)}
   .btn-secondary{color:var(--river-deep);background:transparent;box-shadow:inset 0 0 0 2px var(--river)}
-  .btn-secondary:hover{background:#E1EAE5}
+  .btn-secondary:hover{background:#EDE8DE}
   .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
   .form-link{font-size:15px;font-weight:500;color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px}
   .form-link:hover{color:var(--river-deep)}
-  .cta .form-link{color:#D6E6DF}
+  .cta .form-link{color:#D9D4CA}
   .cta .form-link:hover{color:#fff}
 
   /* Hero */
@@ -133,6 +134,7 @@
   .who-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:40px}
   .who-grid > div{padding:0 40px 0 0}
   .who-grid > div + div{padding:0 0 0 40px;border-left:2px solid var(--line)}
+  .who-art{display:block;width:100%;max-width:420px;height:auto;margin:0 0 22px;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:14px 10px 8px}
   .who h3{font-size:26px;color:var(--river-deep)}
   .who p{margin:12px 0 0}
   .who ul{margin:18px 0 0;padding-left:20px}
@@ -142,15 +144,15 @@
   .steps{list-style:none;padding:0;margin:44px 0 0;counter-reset:s;display:grid;gap:0}
   .steps li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:8px 18px;padding:22px 0;border-top:1px solid var(--line)}
   .steps li:last-child{border-bottom:1px solid var(--line)}
-  .steps li::before{grid-row:1 / span 2;content:counter(s);font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:34px;color:var(--amber);line-height:1}
+  .steps li::before{grid-row:1 / span 2;content:counter(s);font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:34px;color:var(--amber);line-height:1}
   .steps h3{font-size:21px;font-family:"Public Sans",sans-serif;font-weight:600;line-height:1.3}
   .steps p{margin:4px 0 0;color:var(--ink-soft);max-width:44em}
 
-  .costs{background:var(--ink);color:#E6EEEA}
+  .costs{background:var(--ink);color:#E9E5DD}
   .costs h2{color:#fff}
   .costs .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
   .costs h3{font-size:19px;font-family:"Public Sans",sans-serif;font-weight:600;color:#fff;line-height:1.35}
-  .costs p{margin:10px 0 0;color:#BFD0C9;font-size:16px}
+  .costs p{margin:10px 0 0;color:#BDB7AC;font-size:16px}
 
   .about .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
   .about p{margin:0 0 16px;max-width:36em}
@@ -165,18 +167,28 @@
   .faq details:last-child{border-bottom:1px solid var(--line)}
   .faq summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--amber);font-family:"Bricolage Grotesque",sans-serif;font-size:24px;line-height:1}
+  .faq summary::after{content:"+";color:var(--amber);font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;line-height:1}
   .faq details[open] summary::after{content:"–"}
   .faq details p{margin:10px 0 0;color:var(--ink-soft)}
 
   .cta{text-align:left;padding-top:24px}
   .cta .box{background:var(--river);color:#fff;border-radius:22px;padding:52px 48px}
   .cta h2{color:#fff}
-  .cta p{color:#D6E6DF;margin:14px 0 0;max-width:34em}
+  .cta p{color:#D9D4CA;margin:14px 0 0;max-width:34em}
   .cta .btn-primary{background:#fff;color:var(--river-deep)}
-  .cta .btn-primary:hover{background:#E8F0EC}
+  .cta .btn-primary:hover{background:#EFEBE3}
   .cta .btn-secondary{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
   .cta .btn-secondary:hover{background:rgba(255,255,255,.1)}
+
+
+  .partners{padding:8px 0 40px}
+  .partners .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 40px;border-top:1px solid var(--line);padding-top:28px}
+  .partners p{margin:0;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  .partner-logos{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
+  .partner-logos img{display:block;width:auto;opacity:.6;transition:opacity .2s}
+  .partner-logos img:hover{opacity:.9}
+  .partner-logos .cocos{height:38px}
+  .partner-logos .balanz{height:22px}
 
   footer{padding:48px 0 56px;font-size:13px;color:var(--ink-soft)}
   footer p{margin:0 0 12px;max-width:62em}
@@ -206,7 +218,7 @@
 
 <header>
   <div class="wrap">
-    <a class="brand" href="/">Octavio Escalante<small>Agente Productor CNV N° 3024</small></a>
+    <a class="brand" href="/"><img class="brand-mark" src="/img/oe-logo.png" width="44" height="41" alt=""><span>Octavio Escalante<small>Agente Productor CNV N° 3024</small></span></a>
     <nav class="head-nav">
       <a class="nav-link" href="/guias/">Guías</a>
       <a class="head-link" href="https://wa.me/5493764363378" target="_blank" rel="noopener">Escribime</a>
@@ -231,16 +243,16 @@
         <h2>Aportes constantes, tiempo largo</h2>
         <p>Si invertís un monto fijo todos los meses, los rendimientos también empiezan a generar rendimientos. Con los años, esa diferencia pesa más que lo que aportaste.</p>
         <svg viewBox="0 0 420 210" role="img" aria-hidden="true">
-          <line x1="20" y1="160" x2="400" y2="160" stroke="#C9D5CF" stroke-width="1"/>
-          <path d="M30.0 160.0 L41.7 158.5 L53.3 156.9 L65.0 155.2 L76.7 153.4 L88.3 151.4 L100.0 149.4 L111.7 147.3 L123.3 145.0 L135.0 142.6 L146.7 140.0 L158.3 137.3 L170.0 134.4 L181.7 131.3 L193.3 128.1 L205.0 124.7 L216.7 121.0 L228.3 117.2 L240.0 113.1 L251.7 108.8 L263.3 104.2 L275.0 99.3 L286.7 94.1 L298.3 88.7 L310.0 82.9 L321.7 76.7 L333.3 70.2 L345.0 63.3 L356.7 56.0 L368.3 48.2 L380.0 40.0 L380.0 114.5 L30.0 160 Z" fill="#C98A1B" opacity="0.12"/>
-          <g fill="#2E6B5C" opacity="0.6"><rect x="38.7" y="151" width="3" height="9" rx="1"/><rect x="73.7" y="151" width="3" height="9" rx="1"/><rect x="108.7" y="151" width="3" height="9" rx="1"/><rect x="143.7" y="151" width="3" height="9" rx="1"/><rect x="178.7" y="151" width="3" height="9" rx="1"/><rect x="213.7" y="151" width="3" height="9" rx="1"/><rect x="248.7" y="151" width="3" height="9" rx="1"/><rect x="283.7" y="151" width="3" height="9" rx="1"/><rect x="318.7" y="151" width="3" height="9" rx="1"/><rect x="353.7" y="151" width="3" height="9" rx="1"/></g>
-          <line x1="30" y1="160" x2="380" y2="114.5" stroke="#2E6B5C" stroke-width="1.25" stroke-linecap="round"/>
-          <path class="curve" d="M30.0 160.0 L41.7 158.5 L53.3 156.9 L65.0 155.2 L76.7 153.4 L88.3 151.4 L100.0 149.4 L111.7 147.3 L123.3 145.0 L135.0 142.6 L146.7 140.0 L158.3 137.3 L170.0 134.4 L181.7 131.3 L193.3 128.1 L205.0 124.7 L216.7 121.0 L228.3 117.2 L240.0 113.1 L251.7 108.8 L263.3 104.2 L275.0 99.3 L286.7 94.1 L298.3 88.7 L310.0 82.9 L321.7 76.7 L333.3 70.2 L345.0 63.3 L356.7 56.0 L368.3 48.2 L380.0 40.0" fill="none" stroke="#C98A1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="380" cy="40" r="3" fill="#C98A1B"/>
-          <text x="366" y="30" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" font-weight="600" fill="#7A5310">Con interés compuesto</text>
-          <text x="374" y="141" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#1F4E43">Tus aportes</text>
-          <text x="30" y="186" font-family="Public Sans, sans-serif" font-size="13" fill="#3E5A55">Hoy</text>
-          <text x="380" y="186" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#3E5A55">Con los años</text>
+          <line x1="20" y1="160" x2="400" y2="160" stroke="#DED8CC" stroke-width="1"/>
+          <path d="M30.0 160.0 L41.7 158.5 L53.3 156.9 L65.0 155.2 L76.7 153.4 L88.3 151.4 L100.0 149.4 L111.7 147.3 L123.3 145.0 L135.0 142.6 L146.7 140.0 L158.3 137.3 L170.0 134.4 L181.7 131.3 L193.3 128.1 L205.0 124.7 L216.7 121.0 L228.3 117.2 L240.0 113.1 L251.7 108.8 L263.3 104.2 L275.0 99.3 L286.7 94.1 L298.3 88.7 L310.0 82.9 L321.7 76.7 L333.3 70.2 L345.0 63.3 L356.7 56.0 L368.3 48.2 L380.0 40.0 L380.0 114.5 L30.0 160 Z" fill="#8C7B5E" opacity="0.12"/>
+          <g fill="#1C1C1C" opacity="0.6"><rect x="38.7" y="151" width="3" height="9" rx="1"/><rect x="73.7" y="151" width="3" height="9" rx="1"/><rect x="108.7" y="151" width="3" height="9" rx="1"/><rect x="143.7" y="151" width="3" height="9" rx="1"/><rect x="178.7" y="151" width="3" height="9" rx="1"/><rect x="213.7" y="151" width="3" height="9" rx="1"/><rect x="248.7" y="151" width="3" height="9" rx="1"/><rect x="283.7" y="151" width="3" height="9" rx="1"/><rect x="318.7" y="151" width="3" height="9" rx="1"/><rect x="353.7" y="151" width="3" height="9" rx="1"/></g>
+          <line x1="30" y1="160" x2="380" y2="114.5" stroke="#1C1C1C" stroke-width="1.25" stroke-linecap="round"/>
+          <path class="curve" d="M30.0 160.0 L41.7 158.5 L53.3 156.9 L65.0 155.2 L76.7 153.4 L88.3 151.4 L100.0 149.4 L111.7 147.3 L123.3 145.0 L135.0 142.6 L146.7 140.0 L158.3 137.3 L170.0 134.4 L181.7 131.3 L193.3 128.1 L205.0 124.7 L216.7 121.0 L228.3 117.2 L240.0 113.1 L251.7 108.8 L263.3 104.2 L275.0 99.3 L286.7 94.1 L298.3 88.7 L310.0 82.9 L321.7 76.7 L333.3 70.2 L345.0 63.3 L356.7 56.0 L368.3 48.2 L380.0 40.0" fill="none" stroke="#8C7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="380" cy="40" r="3" fill="#8C7B5E"/>
+          <text x="366" y="30" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" font-weight="600" fill="#5E5240">Con interés compuesto</text>
+          <text x="374" y="141" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#000000">Tus aportes</text>
+          <text x="30" y="186" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Hoy</text>
+          <text x="380" y="186" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Con los años</text>
         </svg>
         <p class="note">Gráfico ilustrativo con una tasa hipotética constante. No representa un rendimiento real ni garantizado.</p>
       </figure>
@@ -252,6 +264,13 @@
       <h2>Con quién trabajo</h2>
       <div class="who-grid">
         <div>
+          <svg class="who-art" viewBox="0 0 420 200" role="img" aria-label="Ilustración: aportes periódicos que avanzan hacia metas, del fondo de emergencia a la jubilación">
+            <line x1="20" y1="180" x2="400" y2="180" stroke="#DED8CC" stroke-width="1"/>
+            <path d="M30 170 L120 170 L120 128 L230 128 L230 86 L350 86 L350 44 L392 44 L392 180 L30 180 Z" fill="#1C1C1C" opacity="0.07"/>
+            <g fill="#1C1C1C" opacity="0.55"><rect x="40" y="171" width="3" height="9" rx="1"/><rect x="68" y="171" width="3" height="9" rx="1"/><rect x="96" y="171" width="3" height="9" rx="1"/><rect x="124" y="171" width="3" height="9" rx="1"/><rect x="152" y="171" width="3" height="9" rx="1"/><rect x="180" y="171" width="3" height="9" rx="1"/><rect x="208" y="171" width="3" height="9" rx="1"/><rect x="236" y="171" width="3" height="9" rx="1"/><rect x="264" y="171" width="3" height="9" rx="1"/><rect x="292" y="171" width="3" height="9" rx="1"/><rect x="320" y="171" width="3" height="9" rx="1"/><rect x="348" y="171" width="3" height="9" rx="1"/><rect x="376" y="171" width="3" height="9" rx="1"/></g>
+            <path d="M30 170 L120 170 L120 128 L230 128 L230 86 L350 86 L350 44 L392 44" fill="none" stroke="#1C1C1C" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="120" cy="128" r="3.5" fill="#8C7B5E"/><text x="128" y="146" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Fondo de emergencia</text><circle cx="230" cy="86" r="3.5" fill="#8C7B5E"/><text x="238" y="104" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Tu próxima meta</text><circle cx="350" cy="44" r="3.5" fill="#8C7B5E"/><text x="392" y="30" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Jubilación</text>
+          </svg>
           <h3>Personas</h3>
           <p>Armamos tu cartera según tus metas, tu horizonte y cuánto podés aportar. Desde el fondo de emergencia hasta el ahorro para la jubilación.</p>
           <ul>
@@ -261,6 +280,14 @@
           </ul>
         </div>
         <div>
+          <svg class="who-art" viewBox="0 0 420 200" role="img" aria-label="Ilustración: cobros y pagos de una empresa durante el mes, con la liquidez invertida mientras tanto">
+            <line x1="20" y1="110" x2="400" y2="110" stroke="#DED8CC" stroke-width="1"/>
+            <rect x="40" y="72" width="10" height="38" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="96" y="84" width="10" height="26" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="152" y="66" width="10" height="44" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="208" y="80" width="10" height="30" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="264" y="70" width="10" height="40" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="320" y="86" width="10" height="24" rx="2" fill="#1C1C1C" opacity="0.8"/><rect x="68" y="110" width="10" height="22" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><rect x="124" y="110" width="10" height="34" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><rect x="180" y="110" width="10" height="18" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><rect x="236" y="110" width="10" height="30" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><rect x="292" y="110" width="10" height="26" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><rect x="348" y="110" width="10" height="36" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/>
+            <path d="M30 52 C 110 44, 170 60, 230 48 S 340 40, 392 46" fill="none" stroke="#151515" stroke-width="1.2" stroke-dasharray="3 4"/>
+            <text x="392" y="34" text-anchor="end" font-family="Public Sans, sans-serif" font-size="13" fill="#151515">Liquidez invertida</text>
+            <rect x="30" y="172" width="10" height="10" rx="2" fill="#1C1C1C" opacity="0.8"/><text x="46" y="181" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Cobros</text>
+            <rect x="110" y="172" width="10" height="10" rx="2" fill="none" stroke="#8C7B5E" stroke-width="1.2"/><text x="126" y="181" font-family="Public Sans, sans-serif" font-size="13" fill="#57534C">Pagos</text>
+          </svg>
           <h3>Empresas</h3>
           <p>La plata que tu empresa tiene en caja no tiene por qué quedar quieta. La invertimos según tus ingresos, pagos y plazos, para que esté disponible cuando la necesitás.</p>
           <ul>
@@ -383,6 +410,16 @@
     </div>
   </section>
 </main>
+
+<section class="partners" aria-label="Agentes con los que operás">
+  <div class="wrap">
+    <p>Operás con agentes regulados por la CNV</p>
+    <div class="partner-logos">
+      <img class="cocos" src="/img/cocos.png" width="86" height="38" alt="Cocos Capital">
+      <img class="balanz" src="/img/balanz.png" width="108" height="22" alt="Balanz">
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
