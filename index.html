@@ -160,6 +160,9 @@
   .creds li{padding:10px 0;border-top:1px solid var(--line);font-weight:500}
   .portrait{margin:28px 0 0;max-width:340px}
   .portrait img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+  .portrait img{filter:grayscale(1) sepia(.14) contrast(.92) brightness(1.03);transition:filter .9s ease}
+  @media (hover:hover){.portrait:hover img{filter:none}}
+  @media (hover:none){.portrait.in-view img{filter:none;transition-delay:.3s}}
 
   .faq{background:var(--paper);border-top:1px solid var(--line)}
   .faq-list{margin:36px 0 0;max-width:52em}
@@ -429,5 +432,12 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    var f=document.querySelector('.portrait');
+    if(!f||!('IntersectionObserver' in window)||!matchMedia('(hover:none)').matches)return;
+    new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){f.classList.add('in-view');o.disconnect();}});},{threshold:.6}).observe(f);
+  })();
+</script>
 </body>
 </html>
