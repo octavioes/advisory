@@ -9,7 +9,7 @@
 ## Cómo trabaja
 - Atención remota en todo el país (WhatsApp, llamada, videollamada).
 - La comisión se informa antes de la primera operación.
-- No recibe ni administra fondos de clientes; nunca pide contraseñas.
+- No recibe ni administra fondos de clientes.
 
 ## Guías
 - [Qué es un fondo money market y cómo funciona](https://octavioescalante.com/guias/que-es-un-fondo-money-market/): en qué invierte, para qué sirve, riesgos y diferencias con el plazo fijo.
