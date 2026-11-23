@@ -12,6 +12,7 @@
 - No recibe ni administra fondos de clientes.
 
 ## Guías
+- [Cómo abrir una cuenta comitente en Argentina](https://octavioescalante.com/guias/como-abrir-una-cuenta-comitente/): qué es, requisitos, paso a paso, costos e ingreso y retiro de fondos.
 - [Qué es un fondo money market y cómo funciona](https://octavioescalante.com/guias/que-es-un-fondo-money-market/): en qué invierte, para qué sirve, riesgos y diferencias con el plazo fijo.
 
 ## Otros proyectos

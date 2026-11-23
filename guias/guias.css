@@ -61,7 +61,7 @@ article .meta{color:var(--ink-soft);font-size:15px;margin:14px 0 0}
 .tldr p{margin:0}
 article h2{font-size:28px;margin:44px 0 0}
 article p{margin:14px 0 0}
-article ul{margin:14px 0 0;padding-left:22px}
+article ul,article ol{margin:14px 0 0;padding-left:22px}
 article li{margin:6px 0}
 article li::marker{color:var(--amber)}
 .table-wrap{overflow-x:auto;margin:18px 0 0}
