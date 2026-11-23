@@ -13,6 +13,7 @@
 
 ## Guías
 - [Cómo abrir una cuenta comitente en Argentina](https://octavioescalante.com/guias/como-abrir-una-cuenta-comitente/): qué es, requisitos, paso a paso, costos e ingreso y retiro de fondos.
+- [Money market o plazo fijo: cuál conviene](https://octavioescalante.com/guias/money-market-o-plazo-fijo/): diferencias de disponibilidad, rendimiento, plazo mínimo y garantía; cuándo conviene cada uno y cómo combinarlos.
 - [Qué es un fondo money market y cómo funciona](https://octavioescalante.com/guias/que-es-un-fondo-money-market/): en qué invierte, para qué sirve, riesgos y diferencias con el plazo fijo.
 
 ## Otros proyectos
