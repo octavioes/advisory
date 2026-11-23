@@ -48,6 +48,24 @@
   ]
 }
 </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X07MM6HFDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X07MM6HFDY');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var s = a.closest('section, header, footer, article'); var where = s ? (s.id || s.className.split(' ')[0] || s.tagName.toLowerCase()) : 'page';
+    if (h.indexOf('wa.me') > -1) gtag('event', 'generate_lead', { method: 'whatsapp', link_location: where });
+    else if (h.indexOf('forms.gle') > -1 || h.indexOf('docs.google.com/forms') > -1) gtag('event', 'generate_lead', { method: 'formulario', link_location: where });
+    else if (h.indexOf('mailto:') === 0) gtag('event', 'generate_lead', { method: 'email', link_location: where });
+    else if (h.indexOf('cnv.gov.ar') > -1) gtag('event', 'verificar_cnv', { link_location: where });
+  });
+</script>
 </head>
 <body>
 
