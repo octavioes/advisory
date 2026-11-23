@@ -28,7 +28,8 @@ ATENCIÓN: Netlify publica toda la carpeta. Este archivo está bloqueado con `ne
 
 ## Analítica
 - GA4 `G-X07MM6HFDY` en `<head>` de todas las páginas. Toda página nueva lleva el mismo bloque.
-- Eventos: `generate_lead` (method: whatsapp / formulario / email) y `verificar_cnv`.
+- Eventos: `generate_lead` (method: whatsapp / formulario / email), `abrir_cuenta` (broker: cocos / balanz) y `verificar_cnv`.
+- Links de apertura: Cocos con link de AP (onelink); Balanz con link genérico sin parámetros de campaña.
 
 ## Forma de trabajo
 - Mostrar vista previa (capturas) antes de publicar cambios visuales o de texto.

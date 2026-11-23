@@ -36,6 +36,8 @@
     if (h.indexOf('wa.me') > -1) gtag('event', 'generate_lead', { method: 'whatsapp', link_location: where });
     else if (h.indexOf('forms.gle') > -1 || h.indexOf('docs.google.com/forms') > -1) gtag('event', 'generate_lead', { method: 'formulario', link_location: where });
     else if (h.indexOf('mailto:') === 0) gtag('event', 'generate_lead', { method: 'email', link_location: where });
+    else if (h.indexOf('cocos-capital.onelink.me') > -1) gtag('event', 'abrir_cuenta', { broker: 'cocos', link_location: where });
+    else if (h.indexOf('balanz.com/abrir-cuenta') > -1) gtag('event', 'abrir_cuenta', { broker: 'balanz', link_location: where });
     else if (h.indexOf('cnv.gov.ar') > -1) gtag('event', 'verificar_cnv', { link_location: where });
   });
 </script>

@@ -104,6 +104,10 @@
   .btn-primary:hover{background:var(--river-deep)}
   .btn-secondary{color:var(--river-deep);background:transparent;box-shadow:inset 0 0 0 2px var(--river)}
   .btn-secondary:hover{background:#EDE8DE}
+  .steps .open-links{grid-column:2;display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px}
+  .open-links a{font-weight:600;font-size:15px;color:var(--ink);text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:4px}
+  .open-links a::after{content:" \2197";font-weight:400;color:var(--amber)}
+  .open-links a:hover{text-decoration-color:var(--ink)}
   .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
   .form-link{font-size:15px;font-weight:500;color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px}
   .form-link:hover{color:var(--river-deep)}
@@ -231,6 +235,8 @@
     if (h.indexOf('wa.me') > -1) gtag('event', 'generate_lead', { method: 'whatsapp', link_location: where });
     else if (h.indexOf('forms.gle') > -1 || h.indexOf('docs.google.com/forms') > -1) gtag('event', 'generate_lead', { method: 'formulario', link_location: where });
     else if (h.indexOf('mailto:') === 0) gtag('event', 'generate_lead', { method: 'email', link_location: where });
+    else if (h.indexOf('cocos-capital.onelink.me') > -1) gtag('event', 'abrir_cuenta', { broker: 'cocos', link_location: where });
+    else if (h.indexOf('balanz.com/abrir-cuenta') > -1) gtag('event', 'abrir_cuenta', { broker: 'balanz', link_location: where });
     else if (h.indexOf('cnv.gov.ar') > -1) gtag('event', 'verificar_cnv', { link_location: where });
   });
 </script>
@@ -328,7 +334,7 @@
         <li><h3>Charlamos</h3><p>Quince minutos por llamada o WhatsApp para entender qué necesitás.</p></li>
         <li><h3>Completás el formulario</h3><p>Tus objetivos, plazos y perfil, para que la propuesta salga de datos y no de una idea general.</p></li>
         <li><h3>Te paso una propuesta</h3><p>Qué instrumentos, cuánto en cada uno y por qué.</p></li>
-        <li><h3>Abrís o vinculás tu cuenta</h3><p>Operás en Cocos Capital o en Balanz, dos agentes regulados por la CNV. Elegimos juntos el que mejor te sirva. La cuenta y la plata están siempre a tu nombre.</p></li>
+        <li><h3>Abrís o vinculás tu cuenta</h3><p>Operás en Cocos Capital o en Balanz, dos agentes regulados por la CNV. Elegimos juntos el que mejor te sirva. La cuenta y la plata están siempre a tu nombre.</p><p class="open-links"><a href="https://cocos-capital.onelink.me/8LJp/gfnbm0zn" target="_blank" rel="noopener">Abrir cuenta en Cocos</a><a href="https://balanz.com/abrir-cuenta-2.aspx" target="_blank" rel="noopener">Abrir cuenta en Balanz</a></p></li>
         <li><h3>Hacemos seguimiento</h3><p>Revisamos la cartera y ajustamos cuando cambian tus planes o el mercado.</p></li>
       </ol>
     </div>
